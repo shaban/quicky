@@ -26,7 +26,7 @@ quicky isn't meant to be a reactive framework. It will traverse the DOM holding 
 - hide/show a DOM Node and its chilren
 - create a sub component by providing data and referencing a template file
 #### Fixed HTML Structure
-A DOM Nodes type is fixed a <div> can never become a <p> Node or any other DOM Node.
+A DOM Nodes type is fixed a **div** can never become a **p** Node or any other DOM Node.
 #### Editor Support
 Quicky templates are stored in .html files with Syntax Mode set to Go. You can freely switch between Go and HTML mode for focusing either on templating or template logic.
 
