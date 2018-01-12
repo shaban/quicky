@@ -15,7 +15,7 @@ This is the representation of a Virtual DOM Node
 ```
 //N is a VDOM Node
 type N struct {
-	//N is the XMLName.Local os the Tag
+	//N is the XMLName.Local of the Tag
 	N string
 	//A is an array of pointers to Attribute Nodes,
 	//T stands for Tuple
