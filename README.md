@@ -28,7 +28,7 @@ quicky isn't meant to be a reactive framework. It will traverse the DOM holding 
 #### Fixed HTML Structure
 A DOM Nodes type is fixed. A **div** can never become a **p** Node or any other DOM Node.
 #### Editor Support
-Quicky templates are stored in .html files with Syntax Mode set to Go. You can freely switch between Go and HTML mode for focusing either on templating or template logic.
+Quicky templates are stored in .gox files with Syntax Mode set to Go. You can freely switch between Go and XML mode for focusing either on templating or template logic.
 
 **Example**
 More after i write some proof of concept code, so that there are no bad surprises later on :P
