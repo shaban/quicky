@@ -11,27 +11,31 @@ The Component embeds three struct pointers
 
 This is the representation of a Virtual DOM Node
 
-it utilizes:
-
-- N string = name of the tag e.g div, p etc.
-- A []*T = array of pointers to Attribute Nodes T stands for Tuple
-- C []*N = array of pointers to Child Nodes
-- P *N = pointer to Parent Node or nil if this the Components Root Node
-- T map[int]*T = map of Text Nodes, int is the position. -1 for head Text Nodes or the index of the Child Node after which this Text Node is rendered
-- I int = counter to tell which TextNode will be the next to get rendered
-
-### Source
+**Source**
 ```
 //N is a VDOM Node
 type N struct {
+	//N is the XMLName.Local os the Tag
 	N string
+	//A is an array of pointers to Attribute Nodes,
+	//T stands for Tuple
 	A []*T
+	//C is an array of pointers to Child Nodes
 	C []*N
+	//P is a pointer to the Parent Node or nil 
+	//if this the Components Root Node
 	P *N
-	T map[int]string
+	//TN is a map of Text Nodes
+	// map key int is the position
+	//-1 for head Text Nodes 
+	//or the index of the Child Node after which this Text Node is rendered
+	TN map[int]*TN
+	//I is a counter to tell which TextNode will be the next to get rendered
 	I int
 }
 ```
+
+
 
 
 ## Illustration
