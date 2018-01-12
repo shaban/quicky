@@ -35,6 +35,35 @@ type N struct {
 }
 ```
 
+### dom.T
+
+This is the representation of a DOM Attribute Key, Value pair.
+
+**Source**
+```
+//T is an Attribute-Tuple
+type T struct {
+	//K is the Name of the Attribute
+	//e.g class, style, href
+	K string
+	//V is the verbatim value of the attribute
+	//it will only be used when
+	//this is an Attribute Tuple
+	//that doesn't contain Expressions
+	V string
+	//X is an array of pointers to Expressions
+	X []*X
+	//F is a map of value fragments
+	//map key int is the position for rendering
+	//-1 for head fragments
+	//or the index of an expression after which the 
+	//fragment will be rendered
+	F map[int]string
+	//B indicates if this Tuple represents a boolean attribute
+	//e.g. disabled, required etc.
+	B bool
+}
+```
 
 
 
