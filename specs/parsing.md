@@ -65,6 +65,50 @@ type T struct {
 }
 ```
 
+### dom.X
+
+This is the representation of an Expression inside a TextNode or DOM Attribute Value
+
+```
+//X is an Expression
+type X struct {
+	//B is holding the evaluated boolean Value:
+
+	//of a Boolean Expression
+	//{{component.Expression}} for Boolean Attributes
+	//or {{component.Expression ? stringIfTrue}} for regular Attributes
+
+	//of a Reverse Boolean Expression
+	//{{component.Expression : stringIfTrue}}
+	//string is only set if boolean evaluates to false
+
+	//of a ternary expression
+	//{{component.Expression ? stringIfTrue : stringIfFalse}}
+	//This is the composite of a reverse and a normal
+	//Boolean Expression
+
+	//the latter two Expression Types are disallowed
+	//in the scope of a Boolean Attribute
+	//like required etc.
+	B bool
+	//T is printed when B evaluates to True
+	T string
+	//F is printed when B evaluates to False
+	F string
+	//V is a placeholder for string and int expressions
+	//if V is a string it will escape its output
+	//if V is an int it will be converted to string
+	//if V is neither an error will be thrown
+	V interface{}
+	//XT is the Expression Type
+	//0 is a Boolean Expression
+	//1 is a reverse Boolean Expression
+	//2 is a ternary Expression
+	//3 is a string or int printed escaped/verbatim
+	//respectively into the output
+	XT int
+}
+```
 
 
 ## Illustration
