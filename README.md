@@ -31,4 +31,5 @@ A DOM Nodes type is fixed. A **div** can never become a **p** Node or any other 
 Quicky templates are stored in .gox files with Syntax Mode set to Go. You can freely switch between Go and XML mode for focusing either on templating or template logic.
 
 **Anatomy of a .gox File**
+
 ![gox-file](diagrams/gox-file-robot.png)
